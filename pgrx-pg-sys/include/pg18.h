@@ -198,6 +198,7 @@
 #include "utils/regproc.h"
 #include "utils/rel.h"
 #include "utils/relcache.h"
+#include "utils/relmapper.h"
 #include "utils/resowner.h"
 #include "utils/rls.h"
 #include "utils/ruleutils.h"
