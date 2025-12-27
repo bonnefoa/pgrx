@@ -191,6 +191,7 @@
 #include "utils/memutils.h"
 #include "utils/numeric.h"
 #include "utils/palloc.h"
+#include "utils/pg_lsn.h"
 #include "utils/ps_status.h"
 #include "utils/rel.h"
 #include "utils/regproc.h"
