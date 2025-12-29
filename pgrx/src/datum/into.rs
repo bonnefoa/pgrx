@@ -223,7 +223,7 @@ impl IntoDatum for f64 {
 impl IntoDatum for pg_sys::Oid {
     #[inline]
     fn into_datum(self) -> Option<pg_sys::Datum> {
-        if self == pg_sys::Oid::INVALID { None } else { Some(pg_sys::Datum::from(self.to_u32())) }
+        Some(pg_sys::Datum::from(self.to_u32()))
     }
 
     #[inline]
@@ -247,10 +247,7 @@ impl IntoDatum for pg_sys::TransactionId {
 impl IntoDatum for PgOid {
     #[inline]
     fn into_datum(self) -> Option<pg_sys::Datum> {
-        match self {
-            PgOid::Invalid => None,
-            oid => Some(oid.value().into()),
-        }
+        Some(self.value().into())
     }
 
     fn type_oid() -> pg_sys::Oid {
