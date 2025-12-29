@@ -35,6 +35,7 @@
 #include "access/tsmapi.h"
 #include "access/visibilitymap.h"
 #include "access/xact.h"
+#include "access/xlog.h"
 #include "access/xlog_internal.h"
 #include "access/xlogreader.h"
 #include "access/xlogrecovery.h"
